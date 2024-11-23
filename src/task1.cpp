@@ -7,10 +7,11 @@ char* CopyString(const char* str){
     while(*(cp++)){
         counter++;
     }
-    auto res = new char[counter];
+    auto res = new char[counter+1];
     for(auto i = 0; i < counter; i++){
         res[i] = str[i];
     }
+    res[counter] = 0;
     return res;
 }
 
