@@ -30,12 +30,13 @@ char* ConcatinateStrings(const char* a, const char* b){
             counter2++;
         }
     }
-    auto res = new char[counter1 + counter2];
+    auto res = new char[counter1 + counter2 + 1];
     for(auto i = 0; i < counter1; i++){
         res[i] = a[i];
     }
     for(auto i = 0; i < counter2; i++){
         res[counter1+i] = b[i];
     }
+    res[counter1 + counter2] = 0;
     return res;
 }
