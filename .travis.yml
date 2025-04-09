@@ -5,6 +5,7 @@ script:
 - cmake --build _build
 - cmake --build _build --target install
 - cmake --build _build --target test -- ARGS=--verbose
+- docker build -t logger .
 
 addons:
   apt:
@@ -14,3 +15,5 @@ addons:
       - cmake
       - cmake-data
 
+services:
+- docker
